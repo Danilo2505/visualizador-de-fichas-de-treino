@@ -1,4 +1,8 @@
-button {
+body {
+  background-color: var(--color-background-1);
+}
+
+#btn-dark-mode-toggle {
   background-color: var(--color-background-4);
   padding: 0.4rem;
   border: none;
@@ -6,14 +10,17 @@ button {
   width: 80px;
   height: 80px;
   cursor: pointer;
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
 }
 
-button:hover {
-  background-color: var(--color-background-2);
+#btn-dark-mode-toggle:hover {
+  background-color: var(--color-background-5);
   transition: 0.8s;
 }
 
-svg {
+#btn-dark-mode-toggle svg {
   color: var(--color-background-1);
   width: 24px;
   height: 24px;
