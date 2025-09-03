@@ -1,7 +1,56 @@
 body {
   background-color: var(--color-background-1);
+  height: 100%;
 }
 
+body * {
+  text-align: center;
+  vertical-align: middle;
+}
+
+/* ----- <ul> com os planos de treino ----- */
+.ul-planos-de-treino {
+  width: fit-content;
+}
+
+/* ----- <li> do plano de treino ----- */
+.li-plano-de-treino {
+  width: fit-content;
+  min-width: 100%;
+}
+
+.li-plano-de-treino > * {
+  width: 100%;
+}
+
+.li-plano-de-treino table {
+  border-collapse: separate;
+  border-spacing: 0.5rem 0;
+}
+
+.li-plano-de-treino tr > * {
+  border: 2px solid var(--color-background-4);
+  border-width: 0px 2px;
+}
+
+.li-plano-de-treino tr:first-child > * {
+  border-radius: 1rem 1rem 0px 0px;
+  border-top-width: 2px;
+}
+
+.li-plano-de-treino tr:last-child > * {
+  border-radius: 0px 0px 1rem 1rem;
+  border-bottom-width: 2px;
+}
+
+.li-plano-de-treino th,
+.li-plano-de-treino td {
+  padding: 0.5rem;
+  text-align: center;
+  vertical-align: middle;
+}
+
+/* ----- Botão de Tema ----- */
 #btn-dark-mode-toggle {
   background-color: var(--color-background-4);
   padding: 0.4rem;

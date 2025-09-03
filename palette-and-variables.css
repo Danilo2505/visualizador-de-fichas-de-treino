@@ -42,6 +42,10 @@
 }
 
 /* ----- Fontes ----- */
+body > * {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
 /* Font weights utilitários */
 b,
 strong {
