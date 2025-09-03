@@ -4,13 +4,39 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Fichas de Treino</title>
+
+    <!-- ----- Estilos CSS ----- -->
+    <link rel="stylesheet" href="./reset.css" />
+    <link rel="stylesheet" href="./palette-and-variables.css" />
+    <link rel="stylesheet" href="./style.css" />
   </head>
+
+  <!-- ----- Scripts ----- -->
+  <script src="./helpers.js"></script>
+  <script src="./scripts.js"></script>
+
   <body>
+    <!-- ----- Fichas de Treino ----- -->
     <section class="section-ficha-de-treino">
       <ul class="ul-planos-de-treino">
         <li class="li-plano-de-treino">
           <h1>Treino A</h1>
-          <div class="collapsible"></div>
+          <div class="collapsible">
+            <h2 class="exercicio-nome">Supino Reto com Barra</h2>
+            <div class="exercicio-observacao"></div>
+            <table>
+              <tr class="exercicio-informacoes">
+                <th>Séries x Repetições</th>
+                <th>Descanso</th>
+                <th>Carga</th>
+              </tr>
+              <tr>
+                <td>4x15-20</td>
+                <td>45s-60s</td>
+                <td>50%-60%</td>
+              </tr>
+            </table>
+          </div>
         </li>
         <li class="li-plano-de-treino">
           <h1>Treino B</h1>
@@ -38,5 +64,7 @@
         </li>
       </ul>
     </section>
+
+    <button id="btn-dark-mode-toggle"></button>
   </body>
 </html>
