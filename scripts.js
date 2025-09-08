@@ -1,11 +1,30 @@
 worktouts = [
   [
-    "", // Nome do Exercício
-    "", // Séries x Repetições
-    "", // Descanso
-    "", // Carga
+    "Supino Reto com Halteres", // Nome do Exercício
+    "4x20+", // Séries x Repetições
+    "45s-60s", // Descanso
+    "<60%", // Carga
     "", // Observações
-    "", // Descrição
+    "", // Descrição Breve
+  ],
+  ["Crucifixo Máquina", "4x20+", "45s-60s", "<60%", "", ""],
+  ["Tríceps Pulley / Tríceps Mergulho", "3x20+", "45s-60s", "<60%", "", ""],
+  [
+    "Tríceps Testa Polia / Tríceps Francês Polia",
+    "3x20+",
+    "45s-60s",
+    "<60%",
+    "",
+    "",
+  ],
+  ["Desenvolvimento Máquina Peg Neutra", "3x20+", "45s-60s", "<60%", "", ""],
+  [
+    "Elevação Lateral com Halteres / Crucifixo Inverso Máquina",
+    "3x20+",
+    "45s-60s",
+    "<60%",
+    "",
+    "",
   ],
 ];
 
@@ -36,8 +55,39 @@ function defineCurrentTheme(theme) {
 defineCurrentTheme(themeSystem);
 
 /* ----- Converte os treinos para HTML ----- */
-function workoutListToHTML(data) {
+function workoutListToHtml(data) {
+  let htmlOutputList = [];
   for (let i = 0; i < data.length; i++) {
-    // Implementar um switch case de acordo com i (o índice)
+    // Switch Case para relacionar cada elemento dos dados com seu HTML
+    switch (i) {
+      // Nome do Exercício
+      case 0:
+        htmlOutputList.push(`${i} Nome do Exercício: ${data[i]}`);
+        break;
+      // Séries x Repetições
+      case 1:
+        htmlOutputList.push(`${i} Séries x Repetições: ${data[i]}`);
+        break;
+      // Descanso
+      case 2:
+        htmlOutputList.push(`${i} Descanso: ${data[i]}`);
+        break;
+      // Carga
+      case 3:
+        htmlOutputList.push(`${i} Carga: ${data[i]}`);
+        break;
+      // Observações
+      case 4:
+        htmlOutputList.push(`${i} Observações: ${data[i]}`);
+        break;
+      // Descrição Breve
+      case 5:
+        htmlOutputList.push(`${i} Descrição Breve: ${data[i]}`);
+        break;
+    }
   }
+
+  return htmlOutputList.join("\n");
 }
+
+console.log(workoutListToHtml(worktouts[0]));
