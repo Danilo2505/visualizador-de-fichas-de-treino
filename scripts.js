@@ -1,3 +1,14 @@
+worktouts = [
+  [
+    "", // Nome do Exercício
+    "", // Séries x Repetições
+    "", // Descanso
+    "", // Carga
+    "", // Observações
+    "", // Descrição
+  ],
+];
+
 /* ----- Tema Claro/Escuro ----- */
 const btnDarkModeToggle = document.getElementById("btn-dark-mode-toggle");
 const themeSystem = localStorage.getItem("themeSystem") || "light";
