@@ -1,4 +1,12 @@
 worktouts = [
+  /*
+  0 -> Nome do Exercício
+  1 -> Séries x Repetições
+  2 -> Descanso
+  3 -> Carga
+  4 -> Observações
+  5 -> Descrição Breve
+  */
   [
     "Supino Reto com Halteres", // Nome do Exercício
     "4x20+", // Séries x Repetições
@@ -57,35 +65,26 @@ defineCurrentTheme(themeSystem);
 /* ----- Converte os treinos para HTML ----- */
 function workoutListToHtml(data) {
   let htmlOutputList = [];
-  for (let i = 0; i < data.length; i++) {
-    // Switch Case para relacionar cada elemento dos dados com seu HTML
-    switch (i) {
-      // Nome do Exercício
-      case 0:
-        htmlOutputList.push(`${i} Nome do Exercício: ${data[i]}`);
-        break;
-      // Séries x Repetições
-      case 1:
-        htmlOutputList.push(`${i} Séries x Repetições: ${data[i]}`);
-        break;
-      // Descanso
-      case 2:
-        htmlOutputList.push(`${i} Descanso: ${data[i]}`);
-        break;
-      // Carga
-      case 3:
-        htmlOutputList.push(`${i} Carga: ${data[i]}`);
-        break;
-      // Observações
-      case 4:
-        htmlOutputList.push(`${i} Observações: ${data[i]}`);
-        break;
-      // Descrição Breve
-      case 5:
-        htmlOutputList.push(`${i} Descrição Breve: ${data[i]}`);
-        break;
-    }
-  }
+
+  htmlOutputList.push(
+    `<h3 class="exercicio-nome">${data[0]}</h3>
+<h4 class="exercicio-descricao-titulo">Descrição</h4>
+<div class="exercicio-descricao">${data[5]}</div>
+<h4 class="exercicio-obervacao-titulo">Observação(ões)</h4>
+<div class="exercicio-observacao">${data[4]}</div>
+<table class="exercicio-informacoes">
+  <tr>
+    <th>Séries x Repetições</th>
+    <th>Descanso</th>
+    <th>Carga</th>
+  </tr>
+  <tr>
+    <td>${data[1]}</td>
+    <td>${data[2]}</td>
+    <td>${data[3]}</td>
+  </tr>
+</table>`
+  );
 
   return htmlOutputList.join("\n");
 }
