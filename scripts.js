@@ -1,4 +1,4 @@
-/* ---- Tema Claro/Escuro ----- */
+/* ----- Tema Claro/Escuro ----- */
 const btnDarkModeToggle = document.getElementById("btn-dark-mode-toggle");
 const themeSystem = localStorage.getItem("themeSystem") || "light";
 
@@ -23,3 +23,10 @@ function defineCurrentTheme(theme) {
 }
 
 defineCurrentTheme(themeSystem);
+
+/* ----- Converte os treinos para HTML ----- */
+function workoutListToHTML(data) {
+  for (let i = 0; i < data.length; i++) {
+    // Implementar um switch case de acordo com i (o índice)
+  }
+}
